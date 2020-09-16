@@ -18,14 +18,37 @@ package com.example.pack;
  * 
  * */
 
-
 //Product Class
 class Product {
-	int productID;
-	int quantity;
-	double price;
+	private int productID;
+	private int quantity;
+	private double price;
 
 	public Product() {
+	}
+
+	public int getProductID() {
+		return productID;
+	}
+
+	public void setProductID(int productID) {
+		this.productID = productID;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 	// Parameterized constructor
@@ -36,7 +59,7 @@ class Product {
 	}
 
 	// get product price by passing productID
-	double getPrice(int productID) {
+	double getProductPrice(int productID) {
 		switch (productID) {
 
 		case 1:
@@ -63,9 +86,9 @@ public class ProductPrice {
 	private double calculateTotal(Product[] arr, int j) {
 		double total = 0.0;
 		for (int i = 0; i < j; i++) {
-			System.out.println("Product Details: ProductID:" + arr[i].productID + " Quantity:" + arr[i].quantity
-					+ " Price:" + arr[i].price);
-			total += arr[i].price * arr[i].quantity;
+			System.out.println("Product Details: ProductID:" + arr[i].getProductID() + " Quantity:"
+					+ arr[i].getQuantity() + " Price:" + arr[i].getPrice());
+			total += arr[i].getPrice() * arr[i].getQuantity();
 		}
 
 		return total;
@@ -78,7 +101,7 @@ public class ProductPrice {
 		for (int i = 0; i < args.length - 1; i = i + 2) {
 			// create new product object by getting data from command line arguments
 			Product product = new Product();
-			double productPrice = product.getPrice(Integer.parseInt(args[i]));
+			double productPrice = product.getProductPrice(Integer.parseInt(args[i]));
 			// push Product object to array
 			productArray[j] = new Product(Integer.parseInt(args[i]), Integer.parseInt(args[i + 1]), productPrice);
 			j++;
@@ -93,17 +116,12 @@ public class ProductPrice {
 
 }
 
-
-
 /*
- OUTPUT:
- 
-PS C:\Users\Sanul Raskar\eclipse-workspace\Day1\src\com\example\pack> javac ProductPrice.java
-PS C:\Users\Sanul Raskar\eclipse-workspace\Day1\src\com\example\pack> java ProductPrice 1 3 2 4 3 1
-Product Details: ProductID:1 Quantity:3 Price:22.5
-Product Details: ProductID:2 Quantity:4 Price:44.5
-Product Details: ProductID:3 Quantity:1 Price:9.98
-Total retail value of all products sold: 255.48
-PS C:\Users\Sanul Raskar\eclipse-workspace\Day1\src\com\example\pack>
-  
- * */
+  PS C:\Users\Sanul Raskar\eclipse-workspace\Day1\src\com\example\pack> javac ProductPrice.java 
+  PS C:\Users\Sanul Raskar\eclipse-workspace\Day1\src\com\example\pack> java ProductPrice 1 3 2 4 3 1 
+  Product Details: ProductID:1 Quantity:3 Price:22.5 
+  Product Details: ProductID:2 Quantity:4 Price:44.5 
+  Product Details: ProductID:3 Quantity:1 Price:9.98 
+  Total retail value of all products sold: 255.48 
+  PS C:\Users\Sanul Raskar\eclipse-workspace\Day1\src\com\example\pack>
+ */
