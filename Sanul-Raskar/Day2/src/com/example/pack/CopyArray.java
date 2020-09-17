@@ -2,8 +2,8 @@ package com.example.pack;
 
 /*
  * Lab Exercise 19
- * 
- * 
+ * Write a program to declare an array with 8 elements and copy the 8 elements into another 
+ * array and display the same.
  * 
  * Created by Sanul Raskar
  * 
@@ -11,6 +11,7 @@ package com.example.pack;
 
 public class CopyArray {
 
+	//Print Array
 	private static void printArray(int arr[]) {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
@@ -19,7 +20,7 @@ public class CopyArray {
 	}
 
 	public static void main(String[] args) {
-		// Initialize array
+		//Declare and initialize array
 		int[] arr1 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
 		// Create another array arr2 with size of arr1

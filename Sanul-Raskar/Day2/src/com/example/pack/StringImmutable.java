@@ -3,7 +3,7 @@ package com.example.pack;
 /*
  * Lab Exercise 18
  * 
- * 
+ * Write a program to demonstrate the difference between equals and == operator.
  * 
  * Created by Sanul Raskar
  * 

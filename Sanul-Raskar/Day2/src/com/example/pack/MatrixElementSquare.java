@@ -3,7 +3,7 @@ package com.example.pack;
 /*
  * Lab Exercise 22
  * 
- * 
+ * Write a program to display the square of the elements of a two dimensional array.
  * 
  * Created by Sanul Raskar
  * 

@@ -3,7 +3,7 @@ package com.example.pack;
 /*
  * Lab Exercise 21
  * 
- * 
+ * Write a program to construct two matrices and display the sum of those.
  * 
  * Created by Sanul Raskar
  * 

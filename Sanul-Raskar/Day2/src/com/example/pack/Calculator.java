@@ -13,28 +13,32 @@ package com.example.pack;
 
 public class Calculator {
 
-	private int add(int num1, int num2) {
+	//Take two input integer number and return the sum
+	protected int add(int num1, int num2) {
 		return num1 + num2;
 	}
 
-	private int subtract(int num1, int num2) {
+	//Take two input integer number and return the difference
+	protected int subtract(int num1, int num2) {
 		return num1 - num2;
 	}
 
-	private int multiply(int num1, int num2) {
+	//Take two input integer number and return the multiplication
+	protected int multiply(int num1, int num2) {
 		return num1 * num2;
 	}
 
-	private float division(int num1, int num2) {
-		return num1 / (float) num2;
+	//Take two input integer number and return the division by type-casting denominator to double
+	protected double division(int num1, int num2) {
+		return num1 / (double) num2;
 	}
 
 	public static void main(String[] args) {
 		//Initialize two integers
-		int number1 = 3, number2 = 7;
+		int number1 = 7, number2 = 3;
 		//Variables to store results returned from methods
 		int addResult, subResult, mulResult;
-		float divResult;
+		double divResult;
 
 		//Create new object of calculator
 		Calculator calObj = new Calculator();
