@@ -18,33 +18,49 @@ package com.example.pack;
 
 public class Shape {
 
-	private void area(float side) {
-		System.out.println("Area of square with side " + side + " is:" + Math.pow(side, 2));
+	// Calculates square area
+	// Method with single input argument to calculate area.
+	private void area(double side) {
+		System.out.println("Area of square with side " + side + " is: " + Math.pow(side, 2));
 	}
 
-	private void area(float length, float breadth) {
-		System.out.println("Area of rectangle with lenght " + length + " and breadth " + breadth + " is:" + length * breadth);
+	// Calculates rectangle area
+	// Method with two input argument to calculate area.
+	private void area(double length, double breadth) {
+		System.out.println(
+				"Area of rectangle with length " + length + " and breadth " + breadth + " is: " + length * breadth);
 	}
 
-	private void perimeter(float side) {
-		System.out.println("Perimeter of square with side " + side + " is:" + 4 * side);
+	// Calculates square perimeter
+	// Method with one input argument to calculate perimeter.
+	private void perimeter(double side) {
+		System.out.println("Perimeter of square with side " + side + " is: " + 4 * side);
 	}
-	
-	private void perimeter(float length,float breadth) {
-		float perimeter = 2*(length+breadth);
-		System.out.println("Area of rectangle with lenght " + length + " and breadth " + breadth + " is:" + perimeter);
+
+	// Calculates rectangle perimeter
+	// Method with two input argument to calculate perimeter.
+	private void perimeter(double length, double breadth) {
+		double perimeter = 2 * (length + breadth);
+		System.out.println("Area of rectangle with length " + length + " and breadth " + breadth + " is: " + perimeter);
 	}
-	
 
 	public static void main(String[] args) {
 
+		// Create new Shape object
 		Shape obj = new Shape();
+
+		// Calculate square area
 		obj.area(5);
-		obj.area(3,4);
-		
+
+		// Calculate rectangle area
+		obj.area(3.2, 4.5);
+
+		// Calculate perimeter of square
 		obj.perimeter(5);
-		obj.perimeter(3,4);
-		
+
+		// Calculate perimeter of rectangle
+		obj.perimeter(3, 4.6);
+
 	}
 
 }

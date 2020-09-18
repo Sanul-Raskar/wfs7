@@ -11,7 +11,8 @@ package com.example.pack;
 
 public class MatrixElementSquare {
 
-	// Function to print Matrix
+	// Print Matrix
+	//It takes input as matrix (2D array), row size and column size of matrix
 	private static void printMatrix(int M[][], int rowSize, int colSize) {
 		for (int i = 0; i < rowSize; i++) {
 			for (int j = 0; j < colSize; j++)
@@ -21,12 +22,16 @@ public class MatrixElementSquare {
 		}
 	}
 
-	private static int[][] calculateSquare(int arr[][], int size) {
+	//Calculate square of each element in the matrix
+	//It takes input as matrix (2D array), row size and column size of matrix
+	private static int[][] calculateSquare(int arr[][], int rowSize, int colSize) {
 		int i, j;
-		int C[][] = new int[size][size];
+		//Create new matrix C to store result
+		int C[][] = new int[rowSize][colSize];
 
-		for (i = 0; i < size; i++)
-			for (j = 0; j < size; j++)
+		//Iterate through all elements and save square of element in matrix C
+		for (i = 0; i < rowSize; i++)
+			for (j = 0; j < colSize; j++)
 				C[i][j] = (int) Math.pow(arr[i][j], 2);
 
 		return C;
@@ -34,20 +39,21 @@ public class MatrixElementSquare {
 
 	public static void main(String[] args) {
 
-		int size = 2;
+		int rowSize = 2,colSize = 2;
 
+		//Create 2x2 matrix
 		int A[][] = { { 7, 5 }, { 2, 3 } };
 
 		// Print the matrices A
 		System.out.println("\nMatrix A:");
-		printMatrix(A, size, size);
+		printMatrix(A, rowSize, colSize);
 
-		// Add the two matrices
-		int B[][] = calculateSquare(A, size);
+		// Calculate square and save returned result on matrix B
+		int B[][] = calculateSquare(A, rowSize,colSize);
 
-		// Print the result
+		// Print the result matrix B
 		System.out.println("\nResultant Matrix:");
-		printMatrix(B, size, size);
+		printMatrix(B, rowSize, colSize);
 
 	}
 
