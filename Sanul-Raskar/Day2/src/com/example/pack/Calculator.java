@@ -30,7 +30,15 @@ public class Calculator {
 
 	//Take two input integer number and return the division by type-casting denominator to double
 	protected double division(int num1, int num2) {
-		return num1 / (double) num2;
+		double result = 0;
+
+		try {
+			result =  num1 / (double) num2;
+		} catch (ArithmeticException e) {
+			System.out.println("You Shouldn't divide a number by zero");
+		}
+
+		return result;
 	}
 
 	public static void main(String[] args) {

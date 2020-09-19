@@ -12,7 +12,7 @@ package com.example.pack;
 public class CopyArray {
 
 	//Print Array
-	private static void printArray(int arr[]) {
+	private static void printArray(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}

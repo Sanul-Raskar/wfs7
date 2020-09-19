@@ -11,7 +11,7 @@ package com.example.pack;
 
 public class ArrayAverage {
 
-	private static void calculateAverage(int arr[]) {
+	private static void calculateAverage(int[] arr) {
 		//Initialize variables
 		double total = 0, average = 0;
 

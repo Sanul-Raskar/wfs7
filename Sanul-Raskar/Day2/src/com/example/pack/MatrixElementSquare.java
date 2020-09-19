@@ -13,7 +13,7 @@ public class MatrixElementSquare {
 
 	// Print Matrix
 	//It takes input as matrix (2D array), row size and column size of matrix
-	private static void printMatrix(int M[][], int rowSize, int colSize) {
+	private static void printMatrix(int[][] M, int rowSize, int colSize) {
 		for (int i = 0; i < rowSize; i++) {
 			for (int j = 0; j < colSize; j++)
 				System.out.print(M[i][j] + " ");
@@ -24,10 +24,10 @@ public class MatrixElementSquare {
 
 	//Calculate square of each element in the matrix
 	//It takes input as matrix (2D array), row size and column size of matrix
-	private static int[][] calculateSquare(int arr[][], int rowSize, int colSize) {
+	private static int[][] calculateSquare(int[][] arr, int rowSize, int colSize) {
 		int i, j;
 		//Create new matrix C to store result
-		int C[][] = new int[rowSize][colSize];
+		int[][] C = new int[rowSize][colSize];
 
 		//Iterate through all elements and save square of element in matrix C
 		for (i = 0; i < rowSize; i++)
@@ -49,7 +49,7 @@ public class MatrixElementSquare {
 		printMatrix(A, rowSize, colSize);
 
 		// Calculate square and save returned result on matrix B
-		int B[][] = calculateSquare(A, rowSize,colSize);
+		int[][] B = calculateSquare(A, rowSize,colSize);
 
 		// Print the result matrix B
 		System.out.println("\nResultant Matrix:");
