@@ -28,6 +28,7 @@ public class ElementFreqArray {
 			//from current element index to last index iterate
 			for (int j = i + 1; j < arr.length; j++) {
 				//if same element found then increase count variable
+
 				if (arr[i] == arr[j]) {
 					count++;
 					// To avoid counting same element again
@@ -42,6 +43,7 @@ public class ElementFreqArray {
 		
 		
 		//Print the element from array and the frequency of occurrences
+
 		System.out.println(" Element | Frequency");
 		for (int i = 0; i < freq.length; i++) {
 			if (freq[i] != visited)

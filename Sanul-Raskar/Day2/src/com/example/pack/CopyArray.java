@@ -2,6 +2,7 @@ package com.example.pack;
 
 /*
  * Lab Exercise 19
+ 
  * Write a program to declare an array with 8 elements and copy the 8 elements into another 
  * array and display the same.
  * 

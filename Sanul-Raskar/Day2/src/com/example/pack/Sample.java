@@ -24,6 +24,7 @@ public class Sample {
 
 	public static void main(String[] args) {
 		//Create three new objects of class Sample
+
 		Sample s1 = new Sample();
 		Sample s2 = new Sample();
 		Sample s3 = new Sample();
