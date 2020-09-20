@@ -111,12 +111,17 @@ public class PayInfo {
 
 	public static void main(String[] args) {
 
-		DailyWorker dailyWorker = new DailyWorker("Ram", 750);
+		//Create an object of type Worker
+		Worker dailyWorker = new DailyWorker("Ram", 750);
+		//Even though dailyworker is Worker type object, it will execute pay method defined in DailyWorker class
 		dailyWorker.pay(3);
 		System.out.println();
-		SalariedWorker salaryWorker = new SalariedWorker("Sanul", 900);
+		//Create an object of type Worker
+		Worker salaryWorker = new SalariedWorker("Sanul", 900);
+		//Even though salaryworker is Worker type object, it will execute pay method defined in SalariedWorker class
 		salaryWorker.pay(40);
 
+		//Interface Payable is declared in com.example.pack.finance
 		System.out.println("\nUsing Interface:");
 		DailyWorker dailyWorker1 = new DailyWorker("Ram", 750, 3);
 		dailyWorker1.getPayInfo();
