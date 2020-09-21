@@ -1,0 +1,774 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Solution 34:\par
+\par
+package com.hsbc.pack;\par
+//parent class\par
+class Vehicle \{\par
+\tab public Vehicle() \{\par
+\tab\tab super();\par
+\tab\tab System.out.println("This is a vehicle class");\par
+\tab\}\par
+\}\par
+\par
+//base class truck\par
+class Truck extends Vehicle \{\par
+\tab public Truck() \{\par
+\tab  super();\par
+\tab\}\par
+\tab\par
+\tab public void printMessage() \{\par
+\tab\tab System.out.println("This is a truck class");\par
+\tab\}\par
+\}\par
+\par
+//base class Bus\par
+class Bus extends Vehicle \{\par
+\tab public Bus() \{\par
+\tab  super();\par
+\tab\}\par
+\tab\par
+\tab public void printMessage() \{\par
+\tab\tab System.out.println("This is a bus class");\par
+\tab\}\par
+\}\par
+\par
+//base class Car\par
+class Car extends Vehicle \{\par
+\par
+\tab public Car() \{\par
+\tab\tab super();\par
+\tab\}\par
+\tab\par
+\tab public void printMessage() \{\par
+\tab\tab System.out.println("This is a car class");\par
+\tab\}\par
+\}\par
+//Main method\par
+public class Road \{\par
+\tab public static void main(String[] args) \{\par
+\tab    \tab Car c = new Car();\par
+\tab    \tab c.printMessage();\par
+\tab  \tab Truck t = new Truck();\par
+\tab    \tab t.printMessage();\par
+\tab    \tab Bus b = new Bus();\par
+\tab    \tab b.printMessage();\par
+\tab\}\par
+\}\par
+\par
+\par
+Solution35:\par
+//Code to demonstrate use of Super() \par
+Package com.hsbc.pack ;\par
+\par
+public class Solution35 \{\par
+\par
+\tab\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Truck truck = new Truck();\par
+\tab\tab Bus bus = new Bus();\par
+\tab\tab Car car = new Car();\par
+\tab\tab truck.luggage();\par
+\tab\tab bus.travel();\par
+\tab\tab car.personalUse();\par
+\tab\}\par
+\par
+\}\par
+\par
+class Vehicle35 \{\par
+\tab public String color ;\par
+\tab public int noOfWheels;\par
+\tab public String model;\par
+\tab\par
+\tab public String getColor() \{\par
+\tab\tab return color;\par
+\tab\}\par
+\par
+\tab public void setColor(String color) \{\par
+\tab\tab this.color = color;\par
+\tab\}\par
+\par
+\tab public int getNoOfWheels() \{\par
+\tab\tab return noOfWheels;\par
+\tab\}\par
+\par
+\tab public void setNoOfWheels(int noOfWheels) \{\par
+\tab\tab this.noOfWheels = noOfWheels;\par
+\tab\}\par
+\par
+\tab public String getModel() \{\par
+\tab\tab return model;\par
+\tab\}\par
+\par
+\tab public void setModel(String model) \{\par
+\tab\tab this.model = model;\par
+\tab\}\par
+\par
+\tab public void move() \{\par
+\tab\tab System.out.println("Every Vehicle Moves on the road");\par
+\tab\}\par
+\}\par
+\par
+class Truck extends Vehicle35 \{\par
+\tab\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "Truck [color=" + color + ", noOfWheels=" + noOfWheels + ", model=" + model + "]";\par
+\tab\}\par
+\par
+\tab public void luggage() \{\par
+\tab\tab System.out.println("Truck is mainly used for transport of luggage");\par
+\tab\tab Truck truck = new Truck();\par
+\tab\tab truck.setColor("Black");\par
+\tab\tab truck.setModel("T4");\par
+\tab\tab truck.setNoOfWheels(8);\par
+\tab\tab System.out.println(truck);\par
+\tab\}\par
+\tab\par
+\tab\tab\par
+\}\par
+\par
+class Bus extends Vehicle35 \{\par
+\tab\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "Bus [color=" + color + ", noOfWheels=" + noOfWheels + ", model=" + model + "]";\par
+\tab\}\par
+\par
+\tab public void travel() \{\par
+\tab\tab System.out.println("Bus is mainly used for travel");\par
+\tab\tab Bus bus = new Bus();\par
+\tab\tab bus.setColor("Blue");\par
+\tab\tab bus.setModel("Volvo");\par
+\tab\tab bus.setNoOfWheels(6);\par
+\tab\tab System.out.println(bus);\par
+\tab\tab\par
+\tab\}\par
+\}\par
+\par
+class Car extends Vehicle35 \{\par
+\tab\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "Car [color=" + color + ", noOfWheels=" + noOfWheels + ", model=" + model + "]";\par
+\tab\}\par
+\par
+\tab public void personalUse() \{\par
+\tab\tab System.out.println("Car is for personal use");\par
+\tab\tab Car car = new Car();\par
+\tab\tab car.setColor("White");\par
+\tab\tab car.setModel("Audi Q8");\par
+\tab\tab car.setNoOfWheels(4);\par
+\tab\tab System.out.println(car);\par
+\tab\}\par
+\}\par
+\par
+\par
+Solution 36\par
+//Inheretance using protected access specifiers\par
+package pack.hsbc.com;\par
+//\par
+public class Solution36 \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab\par
+\tab\tab Truck36 truck = new Truck36();\par
+\tab\tab Bus36 bus = new Bus36();\par
+\tab\tab Car36 car = new Car36();\par
+\tab\tab Vehicle36 vehicle = new Vehicle36(truck, bus, car );\par
+\tab\}\par
+\par
+\}\par
+\par
+\par
+class Vehicle36 \{\par
+\tab protected String color ;\par
+\tab protected int noOfWheels;\par
+\tab protected String model;\par
+\tab\par
+\tab public Vehicle36() \{\par
+\tab\tab super();\par
+\tab\}\par
+\par
+\par
+\tab protected Vehicle36(Truck36 truck, Bus36 bus, Car36 car) \{\par
+\tab\tab // TODO Auto-generated constructor stub\par
+\tab\tab truck.luggage();\par
+\tab\tab bus.travel();\par
+\tab\tab car.personalUse();\par
+\tab\}\par
+\par
+\par
+\tab protected void display () \{\par
+\tab\tab\par
+\tab\}\par
+\tab\par
+\tab\par
+\tab protected String getColor() \{\par
+\tab\tab return color;\par
+\tab\}\par
+\par
+\tab protected void setColor(String color) \{\par
+\tab\tab this.color = color;\par
+\tab\}\par
+\par
+\tab protected int getNoOfWheels() \{\par
+\tab\tab return noOfWheels;\par
+\tab\}\par
+\par
+\tab protected void setNoOfWheels(int noOfWheels) \{\par
+\tab\tab this.noOfWheels = noOfWheels;\par
+\tab\}\par
+\par
+\tab protected String getModel() \{\par
+\tab\tab return model;\par
+\tab\}\par
+\par
+\tab protected void setModel(String model) \{\par
+\tab\tab this.model = model;\par
+\tab\}\par
+\par
+\tab protected void move() \{\par
+\tab\tab System.out.println("Every Vehicle Moves on the road");\par
+\tab\}\par
+\}\par
+\par
+class Truck36 extends Vehicle36 \{\par
+\tab\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "Truck36 [color=" + color + ", noOfWheels=" + noOfWheels + ", model=" + model + "]";\par
+\tab\}\par
+\par
+\tab protected void luggage() \{\par
+\tab\tab System.out.println("Truck is mainly used for transport of luggage");\par
+\tab\tab Truck36 truck = new Truck36();\par
+\tab\tab truck.setColor("Black");\par
+\tab\tab truck.setModel("T4");\par
+\tab\tab truck.setNoOfWheels(8);\par
+\tab\tab System.out.println(truck);\par
+\tab\}\par
+\tab\par
+\tab\tab\par
+\}\par
+\par
+class Bus36 extends Vehicle36 \{\par
+\tab\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "Bus36 [color=" + color + ", noOfWheels=" + noOfWheels + ", model=" + model + "]";\par
+\tab\}\par
+\par
+\tab protected void travel() \{\par
+\tab\tab System.out.println("Bus is mainly used for travel");\par
+\tab\tab Bus36 bus = new Bus36();\par
+\tab\tab bus.setColor("Blue");\par
+\tab\tab bus.setModel("Volvo");\par
+\tab\tab bus.setNoOfWheels(6);\par
+\tab\tab System.out.println(bus);\par
+\tab\tab\par
+\tab\}\par
+\}\par
+\par
+class Car36 extends Vehicle36 \{\par
+\tab\par
+\tab @Override\par
+\tab public String toString() \{\par
+\tab\tab return "Car36 [color=" + color + ", noOfWheels=" + noOfWheels + ", model=" + model + "]";\par
+\tab\}\par
+\par
+\tab protected void personalUse() \{\par
+\tab\tab System.out.println("Car is for personal use");\par
+\tab\tab Car36 car = new Car36();\par
+\tab\tab car.setColor("White");\par
+\tab\tab car.setModel("Audi Q8");\par
+\tab\tab car.setNoOfWheels(4);\par
+\tab\tab System.out.println(car);\par
+\tab\}\par
+\}\par
+\par
+\par
+Solution 39\par
+package pack.day3.com;\par
+\par
+import java.util.Scanner;\par
+\par
+public class Worker \{\par
+\tab String name;\par
+\tab double salaryRate;\par
+\tab\par
+\tab public String getName() \{\par
+\tab\tab return name;\par
+\tab\}\par
+\tab public void setName(String name) \{\par
+\par
+\par
+\par
+\tab\tab this.name = name;\par
+\tab\}\par
+\tab public double getSalaryRate() \{\par
+\par
+\par
+\par
+\tab\tab return salaryRate;\par
+\tab\}\par
+\tab public void setSalaryRate(double salaryRate) \{\par
+\par
+\par
+\par
+\tab\tab this.salaryRate = salaryRate;\par
+\tab\}\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab DailyWorker dailyWorker = new DailyWorker();\par
+\tab\tab dailyWorker.pay();\par
+\tab\tab\par
+\tab\tab SalariedWorker salariedWorker = new SalariedWorker();\par
+\tab\tab salariedWorker.pay();\par
+\tab\}\par
+\par
+\}\par
+\par
+class DailyWorker extends Worker \{\par
+\tab Scanner scnr = new Scanner(System.in);\par
+\tab void pay () \{\par
+\tab\tab System.out.println("Daily Worker Salary");\par
+\tab\tab DailyWorker dailyWorker = new DailyWorker();\par
+\tab\tab System.out.println("Enter total working days : ");\par
+\tab\tab int hrs = scnr.nextInt();\par
+\tab\tab System.out.println("Enter Daily Wage : ");\par
+\tab\tab dailyWorker.setSalaryRate(scnr.nextDouble());\par
+\tab\tab System.out.println("Total Salary is " + (hrs*dailyWorker.getSalaryRate()));\par
+\tab\}\par
+\}\par
+\par
+class SalariedWorker extends Worker\{\par
+\tab Scanner scnr = new Scanner(System.in);\par
+\tab void pay () \{\par
+\tab\tab System.out.println("Salaried Worker Salary");\par
+\tab\tab SalariedWorker salariedWorker = new SalariedWorker();\par
+\tab\tab System.out.println("Enter your per hour salary: ");\par
+\tab\tab salariedWorker.setSalaryRate(scnr.nextDouble());\par
+\tab\tab System.out.println("Total Salary is " + (40*salariedWorker.getSalaryRate()));\par
+\tab\}\par
+\par
+\}\par
+\par
+\par
+\par
+Solution 41:\par
+//Code to calculate Volume and surface area of differents using abstract class\par
+\par
+package pack.hsbc.com;\par
+import java.util.Scanner;\par
+abstract class Shape3D \{\par
+\tab abstract void volume(double radius, double height);\par
+\tab abstract void surfaceArea(double radius,double height);\par
+\}\par
+\par
+class Cylinder extends Shape3D\{\par
+\tab\par
+\tab void volume(double radius, double height) \{\par
+\tab\tab double volume = 3.14*radius*radius*height;\par
+\tab\tab System.out.println("Volume of cylinder is = " + volume);\par
+\tab\}\par
+\tab  void surfaceArea(double radius,double height) \{\par
+\tab\tab  double surfaceArea = 2*3.14*radius*(radius+height);\par
+\tab\tab\tab System.out.println("Surface area of cylinder is = " + surfaceArea); \par
+\tab  \}\par
+\}\par
+\par
+class Sphere extends Shape3D\{\par
+\tab\par
+\tab void volume(double radius, double height) \{\par
+\tab\tab double volume = (4*3.14*radius*radius*radius)/3;\par
+\tab\tab System.out.println("Volume of sphere is = " + volume);\par
+\tab\}\par
+\tab  void surfaceArea(double radius,double height) \{\par
+\tab\tab  double surfaceArea = 4*3.14*radius*radius;\par
+\tab\tab\tab System.out.println("Surface area of sphere is = " + surfaceArea); \par
+\tab  \}\par
+\}\par
+\par
+class Cube extends Shape3D\{\par
+\tab\par
+\tab void volume(double radius, double height) \{\par
+\tab\tab double volume = height*height*height;\par
+\tab\tab System.out.println("Volume of cube is = " + volume);\par
+\tab\}\par
+\tab  void surfaceArea(double radius,double height) \{\par
+\tab\tab  double surfaceArea = 6*height*height;\par
+\tab\tab\tab System.out.println("Surface area of cube is = " + surfaceArea); \par
+\tab  \}\par
+\}\par
+\par
+class area \{\par
+    public static void main(String args[])\par
+    \{\par
+        double h, r;\par
+        Cylinder cy = new Cylinder();\par
+        Scanner get = new Scanner(System.in);\par
+ \par
+        System.out.print("\\nEnter Base Radius & Vertical Height of Cylinder: ");\par
+        r = get.nextDouble();\par
+        h = get.nextDouble();\par
+        cy.volume(r, h);\par
+        cy.surfaceArea(r, h);\par
+\par
+        Sphere sp = new Sphere();\par
+\par
+        System.out.print("\\nEnter Radius of Sphere: ");\par
+        r = get.nextDouble();\par
+        sp.volume(r, 0);\par
+        sp.surfaceArea(r, 0);\par
+        \par
+        Cube cu = new Cube();\par
+        \par
+        System.out.print("\\nEnter Side of a Cube: ");\par
+        h = get.nextDouble();\par
+        cu.volume(0, h);\par
+        cu.surfaceArea(0, h);\par
+           \par
+     \}\par
+\}   \par
+\par
+\par
+\par
+Solution 43:\par
+//Code to calculate Volume and surface area of differents using interface\par
+\par
+package pack.hsbc.com;\par
+import java.util.Scanner;\par
+interface Calc\par
+\{\par
+\tab double pi=3.14;\par
+\tab void volume(double radius, double height);\par
+\tab void surfaceArea(double radius, double height);\par
+\}\par
+\par
+class Cylinder implements Calc\{\par
+\tab public void volume(double radius, double height) \{\par
+\tab\tab  double volume = pi*radius*radius*height;\par
+\tab\tab  System.out.println("Volume of cylinder is = "+ volume );\tab  \par
+\tab  \}\par
+\tab  \par
+\tab  public void surfaceArea(double radius,double height) \{\par
+\tab\tab  double surfaceArea = 2*3.14*radius*(radius+height);\par
+\tab\tab\tab System.out.println("Surface area of cylinder is = " + surfaceArea); \par
+\tab  \}\par
+\tab\par
+\tab\par
+\}\par
+\par
+class Sphere implements Calc\{\par
+\tab\par
+\tab public void volume(double radius, double height) \{\par
+\tab\tab double volume = (4*pi*radius*radius*radius)/3;\par
+\tab\tab System.out.println("Volume of sphere is = " + volume);\par
+\tab\}\par
+\tab public void surfaceArea(double radius,double height) \{\par
+\tab\tab  double surfaceArea = 4*pi*radius*radius;\par
+\tab\tab\tab System.out.println("Surface area of sphere is = " + surfaceArea); \par
+\tab  \}\par
+\}\par
+\par
+class Cube implements Calc\{\par
+\tab\par
+\tab public void volume(double radius, double height) \{\par
+\tab\tab double volume = height*height*height;\par
+\tab\tab System.out.println("Volume of cube is = " + volume);\par
+\tab\}\par
+\tab public void surfaceArea(double radius,double height) \{\par
+\tab\tab  double surfaceArea = 6*height*height;\par
+\tab\tab\tab System.out.println("Surface area of cube is = " + surfaceArea); \par
+\tab  \}\par
+\}\par
+\par
+class Shape3D \{\par
+    public static void main(String args[])\par
+    \{\par
+        double h, r;\par
+        Cylinder cy = new Cylinder();\par
+        Scanner get = new Scanner(System.in);\par
+ \par
+        System.out.print("\\nEnter Base Radius & Vertical Height of Cylinder: ");\par
+        r = get.nextDouble();\par
+        h = get.nextDouble();\par
+        cy.volume(r, h);\par
+        cy.surfaceArea(r, h);\par
+\par
+        Sphere sp = new Sphere();\par
+        System.out.print("\\nEnter Radius of Sphere: ");\par
+        r = get.nextDouble();\par
+        sp.volume(r, 0);\par
+        sp.surfaceArea(r, 0);\par
+        \par
+        Cube cu = new Cube();\par
+        System.out.print("\\nEnter Side of a Cube: ");\par
+        h = get.nextDouble();\par
+        cu.volume(0, h);\par
+        cu.surfaceArea(0, h);\par
+           \par
+     \}\par
+\}   \par
+\par
+\par
+Solution 44:\par
+//implementation of multiple interface\par
+package pack.day3.com;\par
+\par
+public class Solution44 \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab Line line = new Line();\par
+\tab\tab\par
+\tab\tab line.drawingColor();\par
+\tab\tab line.fillingColor();\par
+\tab\tab line.size();\par
+\tab\tab line.thickness();\par
+\tab\tab\par
+\tab\tab System.out.println();\par
+\tab\tab\par
+\tab\tab Circle circle  = new Circle();\par
+\tab\tab circle.drawingColor();\par
+\tab\tab circle.fillingColor();\par
+\tab\tab circle.size();\par
+\tab\tab circle.thickness();\par
+\par
+\tab\tab System.out.println();\par
+\tab\tab\par
+\tab\tab Square square = new Square();\par
+\tab\tab square.drawingColor();\par
+\tab\tab square.fillingColor();\par
+\tab\tab square.size();\par
+\tab\tab square.thickness();\par
+\tab\tab\par
+\tab\}\par
+\par
+\}\par
+\par
+interface IDrawable \{\par
+\tab void drawingColor();\par
+\tab void thickness();\par
+\}\par
+\par
+interface IFillable\{\par
+\tab void fillingColor();\par
+\tab void size();\par
+\}\par
+\par
+class Line implements IDrawable, IFillable \{\par
+\par
+\tab @Override\par
+\tab public void fillingColor() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("fillingColor in Line");\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void size() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("size in Line");\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void drawingColor() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("drawingColor in Line");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void thickness() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("thickness in Line");\par
+\tab\tab\par
+\tab\}\par
+\tab\par
+\}\par
+\par
+class Circle implements IDrawable, IFillable \{\par
+\par
+\tab @Override\par
+\tab public void fillingColor() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("fillingColor in Circle");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void size() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("size in Circle");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void drawingColor() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("drawingColor in Circle");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void thickness() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("thickness in Circle");\par
+\tab\tab\par
+\tab\}\par
+\tab\par
+\}\par
+\par
+class Square implements IDrawable, IFillable \{\par
+\par
+\tab @Override\par
+\tab public void fillingColor() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("fillingColor in Square");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void size() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("size in Square");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void drawingColor() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("drawingColor in Square");\par
+\tab\tab\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void thickness() \{\par
+\tab\tab // TODO Auto-generated method stub\par
+\tab\tab System.out.println("thickness in Square");\par
+\tab\tab\par
+\tab\}\par
+\tab\par
+\}\par
+Solution 47:\par
+//Implementation of Inner class\par
+package pack.hsbc.com;\par
+\par
+class BankAccount\{\par
+\tab    public double balance;\par
+\tab    \par
+\tab    void deposit(int x) \{\par
+\tab     \tab balance = balance+x;\par
+\tab   \tab\}\par
+\tab    \par
+\tab    void withdraw(int x) \{\par
+\tab     \tab balance = balance-x;\par
+\tab   \tab\}\par
+\tab    private class Inner\{\par
+\tab\tab    double interestAdder() \{\par
+\tab\tab\tab\tab return((balance*12)/(100*12));\par
+\tab\tab\tab\}\par
+\tab    \}\par
+\tab    double getBalance() \{\par
+\tab     \tab Inner inner = new Inner();\par
+\tab\tab\tab balance=balance+inner.interestAdder();  \par
+\tab\tab\tab return balance;\par
+\par
+\tab   \tab\}\par
+\tab   public static void main(String[] args) \{\par
+\tab\tab   BankAccount b=new BankAccount();\par
+\tab\tab   b.deposit(10);\par
+\tab\tab   System.out.println(b.getBalance());\par
+\tab\tab   \par
+\tab     \par
+\tab   \}\par
+\}\par
+\par
+Solution 48:\par
+//Implementation of local inner class\par
+package pack.hsbc.com;\par
+\par
+class BankAccount\{\par
+\tab    public double balance;\par
+\tab    \par
+\tab    void deposit(int x) \{\par
+\tab     \tab balance = balance+x;\par
+\tab   \tab\}\par
+\tab    \par
+\tab    void withdraw(int x) \{\par
+\tab     \tab balance = balance-x;\par
+\tab   \tab\}\par
+\tab    \par
+\tab    double getBalance() \{\par
+\tab     \tab\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab class Inner\{\par
+\tab\tab\tab\tab\tab double interestAdder() \{\par
+\tab\tab\tab\tab\tab\tab return((balance*12)/(100*12));\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab Inner inner = new Inner();\par
+\tab\tab\tab\tab balance=balance+inner.interestAdder();  \par
+\tab\tab\tab\tab return balance;\par
+\par
+\tab   \tab\}\par
+\tab   public static void main(String[] args) \{\par
+\tab\tab   BankAccount b=new BankAccount();\par
+\tab\tab   b.deposit(10);\par
+\tab\tab   System.out.println(b.getBalance());\par
+\tab\tab   \par
+\tab     \par
+\tab   \}\par
+\}\par
+\par
+\par
+\par
+Solution 49:\par
+
+\pard\widctlpar\sl240\slmult1 //Implementation of \i\lang1033 Anonymous inner class\par
+
+\pard\sa200\sl276\slmult1\i0\lang9\par
+package pack.hsbc.com;\par
+\par
+abstract class Calculate\{\par
+\tab   abstract double interest();\par
+\tab\}\par
+\par
+class BankAccount\{\par
+\tab    public double balance;\par
+\tab    \par
+\tab    void deposit(int x) \{\par
+\tab     \tab balance = balance+x;\par
+\tab   \tab\}\par
+\tab    \par
+\tab    void withdraw(int x) \{\par
+\tab     \tab balance = balance-x;\par
+\tab   \tab\}\par
+\tab    \par
+\tab    double getBalance() \{\par
+\tab     \tab\par
+\tab\tab\tab\tab Calculate p=new Calculate()\{\par
+\tab\tab\tab\tab\tab\tab double interest()\{\tab\par
+\tab\tab\tab\tab\tab\tab\tab return((balance*12)/(100*12));\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\};\par
+\par
+\tab\tab\tab\tab balance=balance+p.interest();  \par
+\tab\tab\tab\tab return balance;\par
+\par
+\tab   \tab\}\par
+\tab   public static void main(String[] args) \{\par
+\tab\tab   BankAccount b=new BankAccount();\par
+\tab\tab   b.deposit(10);\par
+\tab\tab   System.out.println(b.getBalance());\par
+\tab\tab   \par
+\tab     \par
+\tab   \}\par
+\}\par
+\par
+\par
+\par
+}
+ 
