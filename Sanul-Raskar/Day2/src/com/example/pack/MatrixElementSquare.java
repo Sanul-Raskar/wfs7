@@ -39,9 +39,11 @@ public class MatrixElementSquare {
 
 	public static void main(String[] args) {
 
+
 		int rowSize = 2,colSize = 2;
 
 		//Create 2x2 matrix
+
 		int A[][] = { { 7, 5 }, { 2, 3 } };
 
 		// Print the matrices A

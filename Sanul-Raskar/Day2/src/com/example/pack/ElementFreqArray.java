@@ -14,6 +14,7 @@ public class ElementFreqArray {
 
 	public static void main(String[] args) {
 
+
 		//Declare and initialize array
 		int[] arr = new int[] { 1, 2, 4, 5, 3, 5, 5, 2, 3, 2 };
 
@@ -29,6 +30,7 @@ public class ElementFreqArray {
 			for (int j = i + 1; j < arr.length; j++) {
 				//if same element found then increase count variable
 
+
 				if (arr[i] == arr[j]) {
 					count++;
 					// To avoid counting same element again
@@ -43,6 +45,7 @@ public class ElementFreqArray {
 		
 		
 		//Print the element from array and the frequency of occurrences
+
 
 		System.out.println(" Element | Frequency");
 		for (int i = 0; i < freq.length; i++) {

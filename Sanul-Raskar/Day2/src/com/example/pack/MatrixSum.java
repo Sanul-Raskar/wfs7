@@ -26,6 +26,7 @@ public class MatrixSum {
 	static int[][] add(int A[][], int B[][], int size) {
 		int i, j;
 		//Store result in matrix C
+
 		int C[][] = new int[size][size];
 
 		for (i = 0; i < size; i++)
@@ -38,7 +39,9 @@ public class MatrixSum {
 	public static void main(String[] args) {
 		int size = 2;
 
+
 		//Create a 2x2 matrix
+
 		int A[][] = { { 1, 1 }, { 2, 2 } };
 		// Print the matrices A
 		System.out.println("\nMatrix A:");
@@ -49,7 +52,9 @@ public class MatrixSum {
 		System.out.println("\nMatrix B:");
 		printMatrix(B, size, size);
 
+
 		// Add the two matrices and store it in matrix C
+
 		int C[][] = add(A, B, size);
 
 		// Print the result
