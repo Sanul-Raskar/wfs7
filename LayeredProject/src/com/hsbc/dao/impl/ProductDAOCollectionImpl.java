@@ -41,9 +41,14 @@ public class ProductDAOCollectionImpl implements IProductDAO {
 	@Override
 	public Product findProductById(int productId) throws ProductException {
 		if(product.get(productId)!=null)
-			return (Product)product.get(productId);
+			return product.get(productId);
 		else
 			throw new ProductException("Product does not exist");
 	}
 
+	static {
+		System.out.println("Class is  loaded here.");
+		
+	}
+	
 }

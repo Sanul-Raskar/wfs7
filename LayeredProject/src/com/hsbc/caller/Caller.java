@@ -32,7 +32,7 @@ public class Caller {
 		}
 		IProductDAO productDao;
 		try {
-			productDao = (IProductDAO)Class.forName(strs).newInstance();
+			productDao = (IProductDAO) Class.forName(strs).newInstance();
 			
 			try {
 				Product p1=new Product("Monitor", 101, 13000, 10, "Computer");
