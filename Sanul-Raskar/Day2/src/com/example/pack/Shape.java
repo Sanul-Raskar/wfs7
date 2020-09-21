@@ -11,7 +11,6 @@ package com.example.pack;
 	Create a main class and invoke the area method to calculate the area of the square and 
 	rectangle. Also invoke the perimeter method to calculate the perimeter of the square 
 	and rectangle.
-
  * Created by Sanul Raskar
  * 
  * */
