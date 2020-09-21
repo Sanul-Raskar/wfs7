@@ -6,17 +6,6 @@ package com.example.pack;
     Create an inner class called InterestAdder and implement the interest calculations and add 
     the interest to the current balance.
     
-    Lab Exercise 48
-    Create a class called BankAccount with deposit (), withdraw () and getBalance () methods.
-    Create a local inner class inside the getBalance() method called InterestAdder and implement 
-    the interest calculations and add the interest to the current balance.
-
-	Lab Exercise 49
-	Create a class called BankAccount with deposit (), withdraw () and getBalance () methods.
-    Create an anonymous inner class in the getBalance() method to do the interest calculations 
-	and add the interest to the current balance.
-
-
 	Created By: Sanul Raskar
  * */
 
@@ -24,6 +13,7 @@ public class BankAccount {
 	private String customerName;
 	private double balance;
 	private double interest;
+	//Object of inner class
 	InterestAdder interestAdder = new InterestAdder();
 
 	public BankAccount() {
@@ -84,42 +74,6 @@ public class BankAccount {
 		}
 	}
 
-	// Method to declare Local inner class
-	private void getBalanceLocalInnerClass() {
-		// Local inner class InterestAdderLocal to add interest to balance
-		class InterestAdderLocal {
-			private double calculateInterest() {
-				return (balance * (interest / 100)) / 12;
-			}
-
-			private void addInterest() {
-				balance += calculateInterest();
-			}
-		}
-
-		// Create object of Local inner class
-		// Scope valid only in getBalanceInnerClass() method
-		InterestAdderLocal localClassObj = new InterestAdderLocal();
-		// add interest to balance
-		localClassObj.addInterest();
-	}
-
-	// Method to declare Anonymous inner class
-	private void getBalanceAnonymousClass() {
-		// Declare Anonymous inner class
-		AddInterest anonymous = new AddInterest() {
-			// implement the interface AddInterest method
-			@Override
-			public void addInterestAnonymousClassMethod() {
-				balance += (balance * (interest / 100) / 12);
-
-			}
-		};
-
-		// Invoke the above implemented method of Anonymous Inner class
-		anonymous.addInterestAnonymousClassMethod();
-	}
-
 	public static void main(String[] args) {
 
 		// Create new bank account by passing Customer name, initial balance and
@@ -146,24 +100,6 @@ public class BankAccount {
 		// Display current balance
 		System.out.println("Account balance: " + account.getBalance());
 
-		System.out.println("Adding interest to balance using local inner class");
-		// Add interest using local inner class
-		account.getBalanceLocalInnerClass();
-		// Display current balance
-		System.out.println("Account balance: " + account.getBalance());
-
-		System.out.println("Adding interest to balance using Anonymous inner class");
-		// Add interest using Anonymous inner class
-		account.getBalanceAnonymousClass();
-		;
-		// Display current balance
-		System.out.println("Account balance: " + account.getBalance());
-
 	}
 
-}
-
-//The methods in this interface will be implemented by Anonymous Inner class
-interface AddInterest {
-	void addInterestAnonymousClassMethod();
 }
