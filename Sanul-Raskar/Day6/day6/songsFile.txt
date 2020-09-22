@@ -1,0 +1,3 @@
+title1/album1/artist1/genre1
+title2/album2/artist2/genre2
+title3/album3/artist3/genre3
