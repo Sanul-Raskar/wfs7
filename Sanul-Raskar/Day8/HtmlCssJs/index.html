@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <!-- <p>Para1</p>
+    <p>Para2</p>
+    <p>Para3</p>
+    <p>Para4</p>
+    <p>Para5</p> -->
+
+    <form id="empForm" name="empform" onsubmit="return validate()">
+      <p>Name</p>
+      <input type="text" id="uname" name="uname" />
+      <div id="nameError" style="color: red"></div>
+      <br />
+      <p>Email</p>
+      <input type="email" id="uemail" name="uemail" />
+      <div id="emailError" style="color: red"></div>
+      <br />
+      <p>City</p>
+      <input type="text" id="ucity" name="ucity" />
+      <div id="cityError" style="color: red"></div>
+      <br />
+      <p>Password</p>
+      <input type="password" id="upassword" name="upassword" />
+      <div id="passwordError" style="color: red"></div>
+      <br />
+      <p>Pincode</p>
+      <input type="text" id="upincode" name="upincode" />
+      <div id="pincodeError" style="color: red"></div>
+      <br />
+      <br />
+
+      <input type="submit" id="submitButton" value="Submit" />
+    </form>
+
+    <div id="result"></div>
+    <!-- <script src="demo.js"></script>
+    <script src="demo.js"></script> -->
+
+    <script src="AsyncAwaitDemo.js"></script>
+  </body>
+</html>
