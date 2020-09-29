@@ -56,7 +56,6 @@ public class ProductDaoImpl implements IProduct {
 		Statement stmt = null;
 
 		String query = "SELECT * FROM app.product";
-		System.out.println(query);
 
 		try {
 			con = DBConnection.createConnection();
