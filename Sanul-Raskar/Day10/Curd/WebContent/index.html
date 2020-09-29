@@ -7,60 +7,109 @@
 <body>
 
 
-<h2>Add new product</h2>
-<form action="./product" method="POST">
-        <table>
-            <tr>
-                <td>Product ID</td>
-                <td><input type="text" required name="productid"></td>
-            </tr>
-            <tr>
-                <td>Product Name</td>
-                <td><input type="text" required name="productname"></td>
-            </tr>
-            <tr>
-                <td>Category</td>
-                <td><input type="text" required name="productcat"></td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td><input type="text" required name="productprice"></td>
-            </tr>
-            <tr>
-                <td>Quantity</td>
-                <td><input type="text" required name="productquan"></td>
-            </tr>
-            <tr>
-                <td>ROL</td>
-                <td><input type="text" required name="productrol"></td>
-            </tr>
-            <tr>
-                <td><button type="submit">Submit</button></td>
-                <td></td>
-            </tr>
-        </table>
-    </form>
+	<h2>Add new product</h2>
+	<form action="./product" method="POST">
+		<table>
+			<tr>
+				<td>Product ID</td>
+				<td><input type="text" required name="productid"></td>
+			</tr>
+			<tr>
+				<td>Product Name</td>
+				<td><input type="text" required name="productname"></td>
+			</tr>
+			<tr>
+				<td>Category</td>
+				<td><input type="text" required name="productcat"></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input type="text" required name="productprice"></td>
+			</tr>
+			<tr>
+				<td>Quantity</td>
+				<td><input type="text" required name="productquan"></td>
+			</tr>
+			<tr>
+				<td>ROL</td>
+				<td><input type="text" required name="productrol"></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit</button></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
 
 	<br />
-	<hr/>
-	
-	
+	<hr />
+
+
 	<h2>View all products</h2>
 	<form action="./product" method="GET">
-        <table>
-            <tr>
-                <td><button type="submit">Get All Products</button></td>
-                <td></td>
-            </tr>
-        </table>
-    </form>
+		<table>
+			<tr>
+				<td><button type="submit">Get All Products</button></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
 	<br />
-	<hr/>
-	
-	
-	<a href="./update">Update a product</a>
+	<hr />
+
+
+
+	<h2>Update a product</h2>
+	<form action="./product" method="PUT">
+		<table>
+			<tr>
+				<td>Product ID</td>
+				<td><input type="text" required name="productid"></td>
+			</tr>
+			<tr>
+				<td>Product Name</td>
+				<td><input type="text" required name="productname"></td>
+			</tr>
+			<tr>
+				<td>Category</td>
+				<td><input type="text" required name="productcat"></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input type="text" required name="productprice"></td>
+			</tr>
+			<tr>
+				<td>Quantity</td>
+				<td><input type="text" required name="productquan"></td>
+			</tr>
+			<tr>
+				<td>ROL</td>
+				<td><input type="text" required name="productrol"></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit</button></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+
+
 	<br />
-	<a href="./delete">Delete a product</a>
+	<h2>Delete a product</h2>
+	<form action="./product" method="DELETE">
+		<table>
+			<tr>
+				<td>Product ID</td>
+				<td><input type="text" required name="productid"></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit</button></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+	<hr />
 	<br />
 
 </body>

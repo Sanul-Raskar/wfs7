@@ -9,8 +9,10 @@ public interface IProduct {
 
 	public ArrayList<Product> retrieveRecords();
 
-	public void updateRecord(Product p);
+	public void updateRecord(Product product);
 
 	public void deleteRecord(int productId);
+	
+	public boolean productExists(int productId);
 
 }
